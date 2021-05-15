@@ -1,0 +1,228 @@
+
+  div {
+    margin-bottom: 10px;
+  }
+  
+  input:invalid+span:after {
+    content: '✖';
+    padding-left: 5px;
+  }
+  
+  input:valid+span:after {
+    content: '✓';
+    padding-left: 5px;
+  }
+#label_power, #label_timer{
+  font-size: 10px;
+}
+
+  #input_field{
+    width: 5em;
+    height: 2em;
+  }
+  
+  #timer_output{
+    background-color: white;
+    border: 1px solid rgb(0, 0, 0);
+    margin: 5px 5px 5px 80px;
+    padding: 5px 9px;
+  }
+
+  /* begin battery info, temp  */
+  .battery_info{
+    float: left;
+  }
+
+  #temp_output{
+ 
+    margin: 5px 5px 5px 20px;
+  }
+  #voltage_bat_1_output, #voltage_bat_2_output{
+
+    margin: 5px 5px 5px 60px;
+  }
+
+  #label_voltage_bat{
+    font-size: 10px;
+  }
+
+  
+  #temp_output, #voltage_bat_1_output, #voltage_bat_2_output {
+    background-color: white;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 1px 20px;
+  }
+/* end battery info, temp */
+
+
+  .sub_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: space-between;
+
+  }
+
+  .button_motor {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    width: 6.7em;
+    height: 2em;
+    margin: 2px 2px 2px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    width: 10em;
+    height: 2em;
+    margin: 2px 2px 2px 2px;
+    text-align: center;
+    text-decoration: none;
+    /* display: inline-block; */
+    width: 100%;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  
+  .button5 {
+    pointer-events: all;
+    background-color: rgb(235, 227, 227);
+    color: black;
+    border: 2px solid #555555;
+  }
+  
+  .button5:hover {
+    background-color: #555555;
+    color: white;
+  }
+
+
+  :root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+  }
+  
+  body {
+    font-family: "Inter", sans-serif;
+  }
+
+ 
+
+  .container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 0.3fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.2fr 0.2fr 0.1fr 0.4fr 0.1fr;
+    grid-template-areas:
+      "nav nav nav nav"
+      "sidebar content1 main main"
+      "sidebar content2 main main"
+      "sidebar content3 main main"
+      "sidebar content4 main main"
+      "footer footer footer footer";
+    grid-gap: 0.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #004d40;
+    text-align: center;
+  }
+  
+  nav {
+    background: #a7ffeb;
+    grid-area: nav;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  main {
+    background: #84ffff;
+    grid-area: main;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  #sidebar {
+    background: #18ffff;
+    grid-area: sidebar;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  #content1 {
+    background: #6fffd2;
+    grid-area: content1;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  #content2 {
+    background: #64ffda;
+    grid-area: content2;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  #content3 {
+    background: #73ffba;
+    grid-area: content3;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+
+  #content4 {
+    background: #64ffda;
+    grid-area: content4;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  footer {
+    background: #1de9b6;
+    grid-area: footer;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  a {
+    text-align: center;
+    display: block;
+    font-family: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 1rem;
+  }
+  
+  @media only screen and (max-width: 550px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr 1fr;
+      grid-template-areas:
+        "nav"
+        "sidebar"
+        "main"
+        "content1"
+        "content2"
+        "content3"
+        "content4"
+        "footer";
+    }
+  }
+
+ 
