@@ -81,7 +81,7 @@ include_once 'header.php'
     </div>
   </div>
 
-
+<!-- Here we include the footer  -->
 <?php
 include_once 'footer.php'
 ?>
