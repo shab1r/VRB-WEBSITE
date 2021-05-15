@@ -15,7 +15,7 @@
     <div class="container">
         <nav>Navbar
 
-
+        <a href="index.php"><img class="logo" src="fotos/logo.png" alt="Blogs logo"></a>
           <ul>
               <li><a href="index.php">Home</a></li>
           </ul>

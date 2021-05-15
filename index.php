@@ -3,8 +3,6 @@ include_once 'header.php'
 ?>
 
   <main>Main</main>
-  <div id="sidebar">Sidebar</div>
-
 
 <!-- controls for motor 1 -->
 <div id="content1"> 
@@ -13,16 +11,16 @@ include_once 'header.php'
         <form action="" class="motor1">
             <div class=sub_container>
                 <div>
-                    <label id=label_power for="input_field">Fractional power</label>
+                    <label class="labels" id=label_power for="input_field">Fractional power</label>
                     <input id="input_field" type="number" step="0.01" min="0" max="1" require placeholder="motor 1" />
                     <span class="validity"></span>
                     <button class="button_motor button5" >start motor 1</button>
                     <button class="button_motor button5" >stop motor 1</button>
                 </div>
                 <div>
-                    <label id=label_timer for="timer_output">TIMER</label>
-                    <output id="timer_output">00:00:00</output>
-                    <button class="button_motor button5" id="reset_timer_1">reset timer 1</button>
+                    <label class="labels" id=label_timer for="timer_output">TIMER</label>
+                    <output id="timer_output_1">00:00:00</output>
+                    <button class="button_timer button5">reset timer 1</button>
                 </div>
             </div>
         </form>
@@ -36,16 +34,16 @@ include_once 'header.php'
         <form action="" class="motor2">
             <div class=sub_container>
                 <div>
-                    <label id=label_power  for="motor_power_input">Fractional power</label>
+                    <label class="labels" id=label_power  for="motor_power_input">Fractional power</label>
                     <input id="input_field" type="number" step="0.01" min="0" max="1" require placeholder="motor 2"/>
                     <span class="validity"></span>
                     <button class="button_motor button5" >start motor 2</button>
                     <button class="button_motor button5" >stop motor 2</button>
                 </div>
                 <div>
-                    <label id=label_timer  for="timer_output">TIMER</label>
-                    <output id="timer_output">00:00:00</output>
-                    <button class="button_motor button5" >reset timer 2</button>
+                    <label class="labels" id=label_timer  for="timer_output">TIMER</label>
+                    <output id="timer_output_2">00:00:00</output>
+                    <button class="button_timer button5" >reset timer 2</button>
                 </div>
             </div>
         </form>
@@ -56,9 +54,9 @@ include_once 'header.php'
       <label for="motor1"><h4>Motor & Timer Control</h4></label>
       <br>
         <form action="">
-            <button class="button button5" >Start Both Motors</button>
-            <button class="button button5" >Stop Both Motors</button>
-            <button class="button button5" >Reset Both Timers</button>
+            <button class="button_both_Motors button5" >Start Both Motors</button>
+            <button class="button_both_Motors button5" >Stop Both Motors</button>
+            <button class="button_both_Timers button5" >Reset Both Timers</button>
         </form>
   </div>
 
@@ -68,20 +66,20 @@ include_once 'header.php'
     <label><h4>information</h4></label>
     <br>
     <div class="battery_info">
-        <label id=label_temp  for="timer_output">TEMPERATUUR </label>
+        <label class="labels" id=label_temp  for="timer_output">TEMPERATUUR </label>
         <output id="temp_output">20 C</output>
         <br><br>
 
-        <label id=label_voltage_bat  for="voltage_bat_1_output">voltage 1</label>
+        <label class="labels" id=label_voltage_bat  for="voltage_bat_1_output">voltage 1</label>
         <output id="voltage_bat_1_output">10 V</output>
         <br><br>
 
-        <label id=label_voltage_bat  for="voltage_bat_2_output">voltage 2</label>
+        <label class="labels" id=label_voltage_bat  for="voltage_bat_2_output">voltage 2</label>
         <output id="voltage_bat_2_output">20 V</output>
     </div>
   </div>
 
-<!-- Here we include the footer  -->
+
 <?php
 include_once 'footer.php'
 ?>
