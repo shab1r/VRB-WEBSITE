@@ -23,7 +23,7 @@ input:valid + span:after {
   font-size: 10px;
 }
 
-#input_field {
+#input_field_motor_1, #input_field_motor_2 {
   width: 5em;
   height: 2em;
 }
@@ -112,14 +112,14 @@ input:valid + span:after {
   margin-left: 7px;
 }
 
-.button5 {
+.default_button {
   pointer-events: all;
   background-color: rgb(235, 227, 227);
   color: black;
   border: 2px solid #555555;
 }
 
-.button5:hover {
+.default_button:hover {
   background-color: #555555;
   color: white;
 }
