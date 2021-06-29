@@ -1,7 +1,6 @@
 <?php
 include_once 'includes/dbh.inc.php';
 include_once 'includes/functions.inc.php';
-session_start();
 ?>
 
 <!DOCTYPE html>
@@ -9,6 +8,9 @@ session_start();
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title>test systeem</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -18,8 +20,6 @@ session_start();
                 integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
                 crossorigin="anonymous">
         </script>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
         
     </head>
     <body>
@@ -27,22 +27,9 @@ session_start();
     <div class="container">
         <nav>
 
-        <a href="/index.php"><img class="logo" src="/fotos/logo.png" alt="Blogs logo"></a>
+        <a href="index.php"><img class="logo" src="/fotos/logo.png" alt="Blogs logo"></a>
           <ul>
-              <!-- <li><a href="/index.php">Home</a></li>
-              <li><a href="/php/login.php">Login</a></li>
-              <li><a href="/includes/logout.inc.php">Log out</a></li> -->
-
-
-                <?php
-                        echo "<li><a href='/index.php'>Home</a></li>";
-
-                    if(isset($_SESSION["useruid"])){
-                        echo "<li><a href='/includes/logout.inc.php'>Log out</a></li>";
-                    }else{
-                        echo "<li><a href='/php/login.php'>Log in</a></li>";
-                    }
-                ?>
+              <li><a href="index.php">Home</a></li>
           </ul>
 
         </nav>

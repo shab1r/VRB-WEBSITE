@@ -1,20 +1,20 @@
 $(document).ready(function() {
   // This function is ment to post data to the api
   function post_func(json_data) {
-    $.post("http://localhost:5000/api", json_data, function(data) {
-      alert(JSON.stringify(data));
+    $.post("http://95.217.181.53:2000/api", json_data, function(data) {
       console.log(JSON.stringify(data));
     });
   }
 
   $(
-    "#start_motor_1, #stop_motor_1, #start_motor_2, #stop_motor_2, #reset_timer_1, #reset_timer_2, #start_both_motors, #stop_both_motors, #reset_both_timers "
+    "#start_motor_1, #stop_motor_1, #start_motor_2, #stop_motor_2, #reset_timer_1, #reset_timer_2, #start_both_motors, #stop_both_motors, #reset_both_timers, #charge_battery_button_start, #charge_battery_button_stop"
   ).click(function() {
-    var headtype;
+    var headtype; 
     var motor_id;
     var timer_id;
     var action;
     var fractional_power;
+    var voltage;
 
     if (this.id == "start_motor_1") {
       headtype = 1;
@@ -89,6 +89,22 @@ $(document).ready(function() {
       action = 3; //3 means reset
       var array_timer_2 = [headtype, timer_id, action];
       var json_data = JSON.stringify({ message: array_timer_2 });
+      post_func(json_data);
+    }else if (this.id == "charge_battery_button_start") {
+      headtype = 3;
+      action = 1; //1 means start
+      voltage = parseFloat($("#charge_battery").val());
+
+      var array_charge_voltage_start = [headtype, action, voltage];
+      var json_data = JSON.stringify({ message: array_charge_voltage_start });
+      post_func(json_data);
+    }else if (this.id == "charge_battery_button_stop") {
+      headtype = 3;
+      action = 2; // 2 means stop
+      voltage = 0;
+
+      var array_charge_voltage_stop = [headtype, action, voltage];
+      var json_data = JSON.stringify({ message: array_charge_voltage_stop });
       post_func(json_data);
     }
   });

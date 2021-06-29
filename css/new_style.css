@@ -1,0 +1,9 @@
+body{
+    background-color: #141414;
+}
+.navbar {
+    background-color: #141414;
+    border-radius: 0;
+}
+
+.card {display:inline-block;}
